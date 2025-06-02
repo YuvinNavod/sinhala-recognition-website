@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+// Then use: src={student1Img} instead of src="/images/team/student1.jpg"
 
 const SinhalaRecognitionWebsite = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'objective', 'significance', 'future', 'features', 'team'];
+      const sections = ['home', 'about', 'objective', 'significance', 'future', 'features', 'demonstration', 'team'];
       const scrollPosition = window.scrollY + 100;
 
       for (let section of sections) {
@@ -59,9 +60,10 @@ const SinhalaRecognitionWebsite = () => {
                 { id: 'significance', label: 'Applications' },
                 { id: 'future', label: 'Future Works' },
                 { id: 'features', label: 'Features' },
+                { id: 'demonstration', label: 'Demonstration' },
                 { id: 'team', label: 'Team' }
               ].map(item => (
-                <li key={item.id} className="nav-item">
+                <li key={item.id} className="nav-item mx-2">
                   <button 
                     className={`nav-link btn btn-link text-white ${activeSection === item.id ? 'active' : ''}`}
                     onClick={() => scrollToSection(item.id)}
@@ -75,7 +77,7 @@ const SinhalaRecognitionWebsite = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Sec  tion */}
       <section id="home" className="min-vh-100 d-flex align-items-center position-relative overflow-hidden">
         <div 
           className="position-absolute top-0 start-0 w-100 h-100"
@@ -341,6 +343,97 @@ const SinhalaRecognitionWebsite = () => {
         </div>
       </section>
 
+      {/* Project Demonstration Section */}
+      <section id="demonstration" className="py-5 bg-light">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="display-5 fw-bold text-primary mb-3">Project Demonstration</h2>
+            <p className="lead">Watch how our Sinhala Recognition system works in real-time</p>
+          </div>
+          <div className="row g-4 justify-content-center">
+            {/* Mobile App Demo */}
+            <div className="col-md-6">
+              <div className="card h-100 border-0 shadow-sm">
+                <div className="card-body p-3">
+                  <h5 className="card-title text-center text-primary mb-3">Mobile App Demonstration</h5>
+                  <div className="ratio ratio-16x9">
+                    <video controls>
+                      <source src="/videos/mobile_demo.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Web App Demo */}
+            <div className="col-md-6">
+              <div className="card h-100 border-0 shadow-sm">
+                <div className="card-body p-3">
+                  <h5 className="card-title text-center text-primary mb-3">Web App Demonstration</h5>
+                  <div className="ratio ratio-16x9">
+                    <video controls>
+                      <source src="/videos/web_demo.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tech Stack Section */}
+      <section id="techstack" className="py-5 bg-white">
+        <div className="container">
+          <div className="row g-4 justify-content-center">
+            {[
+              {
+                name: 'Python',
+                image: '/images/tech/python.png',
+                link: 'https://www.python.org'
+              },
+              {
+                name: 'OpenCV',
+                image: '/images/tech/opencv.png',
+                link: 'https://opencv.org'
+              },
+              {
+                name: 'NumPy',
+                image: '/images/tech/numpy.png',
+                link: 'https://numpy.org'
+              },
+              {
+                name: 'TensorFlow',
+                image: '/images/tech/tensorflow.png',
+                link: 'https://www.tensorflow.org'
+              },
+              {
+                name: 'Vocode',
+                image: '/images/tech/vocode.png',
+                link: 'https://docs.vocode.dev'
+              }
+            ].map((tech, index) => (
+              <div key={index} className="col-6 col-md-4 col-lg-2 text-center">
+                <a href={tech.link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                  <div className="card h-100 border-0 shadow-sm hover-lift py-3">
+                    <img 
+                      src={tech.image} 
+                      alt={tech.name}
+                      className="mx-auto mb-3"
+                      style={{ width: '60px', height: '60px', objectFit: 'contain' }}
+                    />
+                    <h6 className="text-primary fw-bold">{tech.name}</h6>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* Team Section */}
       <section id="team" className="py-5 bg-light">
         <div className="container">
@@ -353,15 +446,25 @@ const SinhalaRecognitionWebsite = () => {
             <div className="col-lg-12 mb-4">
               <div className="card border-0 shadow-sm">
                 <div className="card-body p-4 text-center">
-                  <div className="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '100px', height: '100px'}}>
-                    <i className="fas fa-user-tie text-primary fs-1"></i>
+                  <div className="mb-3">
+                    <img 
+                      src="/images/team/supervisor.jpg" 
+                      alt="Dr. Academic Supervisor"
+                      className="rounded-circle"
+                      style={{
+                        width: '100px', 
+                        height: '100px',
+                        objectFit: 'cover',
+                        border: '3px solid var(--bs-primary)'
+                      }}
+                    />
                   </div>
                   <h4 className="card-title text-primary">Project Supervisor</h4>
-                  <h5 className="mb-2">Dr. Academic Supervisor</h5>
-                  <p className="text-muted mb-2">Senior Lecturer, Department of Computer Science</p>
-                  <p className="mb-0">
-                    <i className="fas fa-envelope text-primary me-2"></i>
-                    supervisor@university.lk
+                  <h5 className="mb-2">Dr. Nalaka Lankasena</h5>
+                  <p className="text-muted mb-2">Senior Lecturer of 
+                    Department of Information and Communication Technology 
+                    Faculty of Technology 
+                    University of Sri Jayewardenepura
                   </p>
                 </div>
               </div>
@@ -371,15 +474,21 @@ const SinhalaRecognitionWebsite = () => {
             <div className="col-md-6 col-lg-4">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4 text-center">
-                  <div className="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '80px', height: '80px'}}>
-                    <i className="fas fa-user text-success fs-2"></i>
+                  <div className="mb-3">
+                    <img 
+                      src="/images/team/student1.jpg" 
+                      alt="Student Name 1"
+                      className="rounded-circle"
+                      style={{
+                        width: '80px', 
+                        height: '80px',
+                        objectFit: 'cover',
+                        border: '3px solid var(--bs-success)'
+                      }}
+                    />
                   </div>
-                  <h5 className="card-title">Student Name 1</h5>
-                  <p className="text-muted mb-2">Student ID: 2021CS001</p>
-                  <p className="mb-0">
-                    <i className="fas fa-envelope text-success me-2"></i>
-                    student1@university.lk
-                  </p>
+                  <h4 className="card-title text-primary">Team Member</h4>
+                  <h5 className="card-title">Sumudu Chamika</h5>
                 </div>
               </div>
             </div>
@@ -387,15 +496,21 @@ const SinhalaRecognitionWebsite = () => {
             <div className="col-md-6 col-lg-4">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4 text-center">
-                  <div className="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '80px', height: '80px'}}>
-                    <i className="fas fa-user text-warning fs-2"></i>
+                  <div className="mb-3">
+                    <img 
+                      src="/images/team/student2.jpg" 
+                      alt="Student Name 2"
+                      className="rounded-circle"
+                      style={{
+                        width: '80px', 
+                        height: '80px',
+                        objectFit: 'cover',
+                        border: '3px solid var(--bs-warning)'
+                      }}
+                    />
                   </div>
-                  <h5 className="card-title">Student Name 2</h5>
-                  <p className="text-muted mb-2">Student ID: 2021CS002</p>
-                  <p className="mb-0">
-                    <i className="fas fa-envelope text-warning me-2"></i>
-                    student2@university.lk
-                  </p>
+                  <h4 className="card-title text-primary">Team Member</h4>
+                  <h5 className="card-title">Thilina Tharinda</h5> 
                 </div>
               </div>
             </div>
@@ -403,15 +518,21 @@ const SinhalaRecognitionWebsite = () => {
             <div className="col-md-6 col-lg-4">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4 text-center">
-                  <div className="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '80px', height: '80px'}}>
-                    <i className="fas fa-user text-info fs-2"></i>
+                  <div className="mb-3">
+                    <img 
+                      src="/images/team/student3.png"
+                      alt="Student Name 3"
+                      className="rounded-circle"
+                      style={{
+                        width: '80px', 
+                        height: '80px',
+                        objectFit: 'cover',
+                        border: '3px solid var(--bs-info)'
+                      }}
+                    />
                   </div>
-                  <h5 className="card-title">Student Name 3</h5>
-                  <p className="text-muted mb-2">Student ID: 2021CS003</p>
-                  <p className="mb-0">
-                    <i className="fas fa-envelope text-info me-2"></i>
-                    student3@university.lk
-                  </p>
+                  <h4 className="card-title text-primary">Team Member</h4>
+                  <h5 className="card-title">Yuvin Navod</h5>
                 </div>
               </div>
             </div>
@@ -420,27 +541,53 @@ const SinhalaRecognitionWebsite = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark text-white py-4">
+      <footer className="bg-dark text-white pt-5 pb-3 mt-5">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <div className="d-flex align-items-center">
-                <i className="fas fa-university fs-3 me-3 text-primary"></i>
-                <div>
-                  <h6 className="mb-0">University Name</h6>
-                  <small className="text-muted">Department of Computer Science</small>
-                </div>
-              </div>
+          <div className="row text-center text-md-start">
+            
+            <div className="col-md-4 mb-4">
+              <h5 className="text-white mb-3">About Us</h5>
+              <ul className="list-unstyled">
+                <li><a href="#home" className="text-light text-decoration-none">Home</a></li>
+                <li><a href="#about" className="text-light text-decoration-none">About</a></li>
+                <li><a href="#features" className="text-light text-decoration-none">Features</a></li>
+                <li><a href="#team" className="text-light text-decoration-none">Team</a></li>
+              </ul>
             </div>
-            <div className="col-md-6 text-md-end">
-              <p className="mb-0">
-                © 2025 Sinhala Recognition Project. All rights reserved.
-              </p>
-              <small className="text-muted">Final Year Research Project</small>
+
+            <div className="col-md-4 mb-4">
+              <h5 className="text-white mb-3">Tech Stack</h5>
+              <ul className="list-unstyled">
+                <li><span className="text-light">Python</span></li>
+                <li><span className="text-light">OpenCV</span></li>
+                <li><span className="text-light">Tensorflow</span></li>
+                <li><span className="text-light">NumPy</span></li>
+              </ul>
+            </div>
+
+            <div className="col-md-4 mb-4">
+              <h5 className="text-white mb-3">Useful Links</h5>
+              <ul className="list-unstyled">
+                <li><a href="#" className="text-light text-decoration-none">Privacy Policy</a></li>
+                <li><a href="#" className="text-light text-decoration-none">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <hr className="border-secondary" />
+
+          <div className="text-center">
+            <p className="mb-2">© 2024 Sinhala Handwritten Recognition Project. All rights reserved.</p>
+            <div>
+              <a href="#" className="text-white me-3"><i className="fab fa-instagram fs-5"></i></a>
+              <a href="#" className="text-white me-3"><i className="fab fa-facebook fs-5"></i></a>
+              <a href="#" className="text-white me-3"><i className="fab fa-twitter fs-5"></i></a>
+              <a href="#" className="text-white"><i className="fab fa-linkedin fs-5"></i></a>
             </div>
           </div>
         </div>
       </footer>
+
 
       {/* Custom Styles */}
       <style jsx>{`
