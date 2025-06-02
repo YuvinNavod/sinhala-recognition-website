@@ -411,7 +411,7 @@ const SinhalaRecognitionWebsite = () => {
               },
               {
                 name: 'Vocode',
-                image: '/images/tech/vocode.png',
+                image: '/images/tech/vocode.jpeg',
                 link: 'https://docs.vocode.dev'
               }
             ].map((tech, index) => (
@@ -498,7 +498,7 @@ const SinhalaRecognitionWebsite = () => {
                 <div className="card-body p-4 text-center">
                   <div className="mb-3">
                     <img 
-                      src="/images/team/student2.jpg" 
+                      src="/images/team/student2.png" 
                       alt="Student Name 2"
                       className="rounded-circle"
                       style={{
