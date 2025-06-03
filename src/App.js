@@ -41,8 +41,8 @@ const SinhalaRecognitionWebsite = () => {
         <div className="container">
           <a className="navbar-brand fw-bold" href="#home">
             <img 
-                  src="/images/nav/nav-icon.png" 
-                  alt="nnav icon"
+                  src={`${process.env.PUBLIC_URL}/images/nav/nav-icon.png`} 
+                  alt="nav icon"
                   className="me-2"
                   style={{ width: '50px', height: '50px', objectFit: 'contain' }}
                 />
@@ -96,7 +96,7 @@ const SinhalaRecognitionWebsite = () => {
             <div className="col-lg-8">
               <div className="mb-2">
                 <img 
-                  src="/images/hero/hero-icon.png" 
+                  src={`${process.env.PUBLIC_URL}/images/hero/hero-icon.png`} 
                   alt="Hero Visual"
                   className="img-fluid animate__animated animate__fadeInDown"
                   style={{ width: '200px', height: '200px', objectFit: 'contain' }}
@@ -132,7 +132,7 @@ const SinhalaRecognitionWebsite = () => {
             <div className="col-lg-6">
               <div className="text-center mb-4 mb-lg-0">
                 <img 
-                  src="/images/about/about.png" 
+                  src={`${process.env.PUBLIC_URL}/images/about/about.png`} 
                   alt="About Visual"
                   className="img-fluid animate__animated animate__fadeInDown"
                   style={{ width: '500px', height: '500px', objectFit: 'contain' }}
@@ -373,7 +373,7 @@ const SinhalaRecognitionWebsite = () => {
                   <h5 className="card-title text-center text-primary mb-3">Mobile App Demonstration</h5>
                   <div className="ratio ratio-16x9">
                     <video controls>
-                      <source src="/videos/mobile_demo.mp4" type="video/mp4" />
+                      <source src={`${process.env.PUBLIC_URL}/videos/mobile_demo.mp4`} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -388,7 +388,7 @@ const SinhalaRecognitionWebsite = () => {
                   <h5 className="card-title text-center text-primary mb-3">Web App Demonstration</h5>
                   <div className="ratio ratio-16x9">
                     <video controls>
-                      <source src="/videos/web_demo.mp4" type="video/mp4" />
+                      <source src={`${process.env.PUBLIC_URL}/videos/web_demo.mp4`} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
@@ -406,32 +406,32 @@ const SinhalaRecognitionWebsite = () => {
             {[
               {
                 name: 'Python',
-                image: '/images/tech/python.png',
+                image: `${process.env.PUBLIC_URL}/images/tech/python.png`,
                 link: 'https://www.python.org'
               },
               {
                 name: 'OpenCV',
-                image: '/images/tech/opencv.png',
+                image: `${process.env.PUBLIC_URL}/images/tech/opencv.png`,
                 link: 'https://opencv.org'
               },
               {
                 name: 'NumPy',
-                image: '/images/tech/numpy.png',
+                image: `${process.env.PUBLIC_URL}/images/tech/numpy.png`,
                 link: 'https://numpy.org'
               },
               {
                 name: 'TensorFlow',
-                image: '/images/tech/tensorflow.png',
+                image: `${process.env.PUBLIC_URL}/images/tech/tensorflow.png`,
                 link: 'https://www.tensorflow.org'
               },
               {
                 name: 'Keras',
-                image: '/images/tech/keras.png',
+                image: `${process.env.PUBLIC_URL}/images/tech/keras.png`,
                 link: 'https://keras.io'
               },
               {
                 name: 'Google Colab',
-                image: '/images/tech/colab.png',
+                image: `${process.env.PUBLIC_URL}/images/tech/colab.png`,
                 link: 'https://colab.research.google.com'
               }
             ].map((tech, index) => (
@@ -468,7 +468,7 @@ const SinhalaRecognitionWebsite = () => {
                 <div className="card-body p-4 text-center">
                   <div className="mb-3">
                     <img 
-                      src="/images/team/supervisor.jpg" 
+                      src={`${process.env.PUBLIC_URL}/images/team/supervisor.jpg`} 
                       alt="Dr. Academic Supervisor"
                       className="rounded-circle"
                       style={{
@@ -496,7 +496,7 @@ const SinhalaRecognitionWebsite = () => {
                 <div className="card-body p-4 text-center">
                   <div className="mb-3">
                     <img 
-                      src="/images/team/student1.jpg" 
+                      src={`${process.env.PUBLIC_URL}/images/team/student1.jpg`} 
                       alt="Student Name 1"
                       className="rounded-circle"
                       style={{
@@ -518,7 +518,7 @@ const SinhalaRecognitionWebsite = () => {
                 <div className="card-body p-4 text-center">
                   <div className="mb-3">
                     <img 
-                      src="/images/team/student2.png" 
+                      src={`${process.env.PUBLIC_URL}/images/team/student2.png`} 
                       alt="Student Name 2"
                       className="rounded-circle"
                       style={{
@@ -540,7 +540,7 @@ const SinhalaRecognitionWebsite = () => {
                 <div className="card-body p-4 text-center">
                   <div className="mb-3">
                     <img 
-                      src="/images/team/student3.png"
+                      src={`${process.env.PUBLIC_URL}/images/team/student3.png`}
                       alt="Student Name 3"
                       className="rounded-circle"
                       style={{
