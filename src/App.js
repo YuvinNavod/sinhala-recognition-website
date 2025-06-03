@@ -40,7 +40,12 @@ const SinhalaRecognitionWebsite = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
         <div className="container">
           <a className="navbar-brand fw-bold" href="#home">
-            <i className="fas fa-brain me-2"></i>
+            <img 
+                  src="/images/nav/nav-icon.png" 
+                  alt="nnav icon"
+                  className="me-2"
+                  style={{ width: '50px', height: '50px', objectFit: 'contain' }}
+                />
             Sinhala Recognition
           </a>
           <button 
@@ -89,8 +94,13 @@ const SinhalaRecognitionWebsite = () => {
         <div className="container position-relative text-white text-center">
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              <div className="mb-4">
-                <i className="fas fa-language display-1 mb-4 text-warning"></i>
+              <div className="mb-2">
+                <img 
+                  src="/images/hero/hero-icon.png" 
+                  alt="Hero Visual"
+                  className="img-fluid animate__animated animate__fadeInDown"
+                  style={{ width: '200px', height: '200px', objectFit: 'contain' }}
+                />
               </div>
               <h1 className="display-3 fw-bold mb-4 animate__animated animate__fadeInUp">
                 Sinhala Handwritten Sentence Recognition
@@ -121,7 +131,12 @@ const SinhalaRecognitionWebsite = () => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="text-center mb-4 mb-lg-0">
-                <i className="fas fa-project-diagram display-1 text-primary mb-3"></i>
+                <img 
+                  src="/images/about/about.png" 
+                  alt="About Visual"
+                  className="img-fluid animate__animated animate__fadeInDown"
+                  style={{ width: '500px', height: '500px', objectFit: 'contain' }}
+                />
               </div>
             </div>
             <div className="col-lg-6">
@@ -410,9 +425,14 @@ const SinhalaRecognitionWebsite = () => {
                 link: 'https://www.tensorflow.org'
               },
               {
-                name: 'Vocode',
-                image: '/images/tech/vocode.jpeg',
-                link: 'https://docs.vocode.dev'
+                name: 'Keras',
+                image: '/images/tech/keras.png',
+                link: 'https://keras.io'
+              },
+              {
+                name: 'Google Colab',
+                image: '/images/tech/colab.png',
+                link: 'https://colab.research.google.com'
               }
             ].map((tech, index) => (
               <div key={index} className="col-6 col-md-4 col-lg-2 text-center">
@@ -577,13 +597,7 @@ const SinhalaRecognitionWebsite = () => {
           <hr className="border-secondary" />
 
           <div className="text-center">
-            <p className="mb-2">© 2024 Sinhala Handwritten Recognition Project. All rights reserved.</p>
-            <div>
-              <a href="#" className="text-white me-3"><i className="fab fa-instagram fs-5"></i></a>
-              <a href="#" className="text-white me-3"><i className="fab fa-facebook fs-5"></i></a>
-              <a href="#" className="text-white me-3"><i className="fab fa-twitter fs-5"></i></a>
-              <a href="#" className="text-white"><i className="fab fa-linkedin fs-5"></i></a>
-            </div>
+            <p className="mb-2">© 2025 Sinhala Handwritten Recognition Project. All rights reserved.</p>
           </div>
         </div>
       </footer>
