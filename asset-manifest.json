@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sinhala-recognition-website/static/css/main.e6c13ad2.css",
-    "main.js": "/sinhala-recognition-website/static/js/main.89699140.js",
+    "main.js": "/sinhala-recognition-website/static/js/main.c9c8616f.js",
     "static/js/453.9677b3be.chunk.js": "/sinhala-recognition-website/static/js/453.9677b3be.chunk.js",
     "index.html": "/sinhala-recognition-website/index.html",
     "main.e6c13ad2.css.map": "/sinhala-recognition-website/static/css/main.e6c13ad2.css.map",
-    "main.89699140.js.map": "/sinhala-recognition-website/static/js/main.89699140.js.map",
+    "main.c9c8616f.js.map": "/sinhala-recognition-website/static/js/main.c9c8616f.js.map",
     "453.9677b3be.chunk.js.map": "/sinhala-recognition-website/static/js/453.9677b3be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.89699140.js"
+    "static/js/main.c9c8616f.js"
   ]
 }
