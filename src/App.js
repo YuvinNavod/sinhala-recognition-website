@@ -189,10 +189,11 @@ const SinhalaRecognitionWebsite = () => {
                     <h4 className="card-title mb-0">Specific Objectives</h4>
                   </div>
                   <ul className="list-unstyled ">
-                    <li className="mb-2"><i className="fas fa-chevron-right text-success me-2"></i>Achieve 95%+ recognition accuracy</li>
-                    <li className="mb-2"><i className="fas fa-chevron-right text-success me-2"></i>Process 454 Sinhala characters</li>
-                    <li className="mb-2"><i className="fas fa-chevron-right text-success me-2"></i>Enable real-time processing</li>
-                    <li className="mb-0"><i className="fas fa-chevron-right text-success me-2"></i>Create mobile-friendly solution</li>
+                    <li className="mb-2"><i className="fas fa-chevron-right text-success me-2"></i>Design and train a CNN model for Sinhala character recognition</li>
+                    <li className="mb-2"><i className="fas fa-chevron-right text-success me-2"></i>Use an RNN (Seq2Seq) model to correct mispredicted words</li>
+                    <li className="mb-2"><i className="fas fa-chevron-right text-success me-2"></i>mplement a segmentation pipeline for characters and words</li>
+                    <li className="mb-2"><i className="fas fa-chevron-right text-success me-2"></i>Modify and create a large, labeled Sinhala dataset</li>
+                    <li className="mb-0"><i className="fas fa-chevron-right text-success me-2"></i>Develop a real-time mobile and web application for public use</li>
                   </ul>
                 </div>
               </div>
@@ -267,7 +268,7 @@ const SinhalaRecognitionWebsite = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="alert alert-success border-0 shadow-sm mb-4" role="alert">
                 <div className="d-flex align-items-center">
                   <i className="fas fa-database text-success fs-4 me-3"></i>
@@ -277,7 +278,7 @@ const SinhalaRecognitionWebsite = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="alert alert-warning border-0 shadow-sm mb-4" role="alert">
                 <div className="d-flex align-items-center">
                   <i className="fas fa-mobile-alt text-warning fs-4 me-3"></i>
@@ -287,13 +288,22 @@ const SinhalaRecognitionWebsite = () => {
                   </div>
                 </div>
               </div>
-              
-              <div className="alert alert-info border-0 shadow-sm" role="alert">
+
+              <div className="alert alert-info border-0 shadow-sm mb-4" role="alert">
                 <div className="d-flex align-items-center">
                   <i className="fas fa-language text-info fs-4 me-3"></i>
                   <div>
                     <h5 className="alert-heading mb-1">Multi-language Support</h5>
                     <p className="mb-0">Extend the system to recognize Tamil and English handwriting</p>
+                  </div>
+                </div>
+              </div>
+              <div className="alert border-0 shadow-sm mb-4" style={{ backgroundColor: '#e6e6fa' }} role="alert">
+                <div className="d-flex align-items-center">
+                  <i className="fas fa-spell-check fs-4 me-3" style={{ color: 'purple' }}></i>
+                  <div>
+                    <h5 className="alert-heading mb-1" style={{ color: 'purple' }}>Post-processing Enhancements</h5>
+                    <p className="mb-0 text-dark">Incorporate spell-check and grammar correction post-processing</p>
                   </div>
                 </div>
               </div>
@@ -402,6 +412,10 @@ const SinhalaRecognitionWebsite = () => {
       {/* Tech Stack Section */}
       <section id="techstack" className="py-5 bg-white">
         <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="display-5 fw-bold text-primary mb-3">Tools & Technologies</h2>
+            <p className="lead">Key frameworks, libraries, and platforms used in the project</p>
+          </div>
           <div className="row g-4 justify-content-center">
             {[
               {
@@ -452,7 +466,6 @@ const SinhalaRecognitionWebsite = () => {
           </div>
         </div>
       </section>
-
 
       {/* Team Section */}
       <section id="team" className="py-5 bg-light">
